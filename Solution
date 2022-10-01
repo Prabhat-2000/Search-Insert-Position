@@ -1,0 +1,15 @@
+class Solution {
+    public int searchInsert(int[] nums, int target) {
+              int value=0;
+        for(int i=1;i<nums.length;i++){
+            if(nums[i]==target){
+                value=i;
+            }else if(nums[i]>target && nums[i-1]<target){
+                value=i;
+            }
+        }
+          if(target>nums[nums.length-1]) value = nums.length;
+        return value;
+        
+    }
+}
